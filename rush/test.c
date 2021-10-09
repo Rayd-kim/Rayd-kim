@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.c                                             :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 21:12:25 by youskim           #+#    #+#             */
-/*   Updated: 2021/10/09 23:34:02 by rayd             ###   ########.fr       */
+/*   Updated: 2021/10/09 23:32:12 by rayd             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
-void	ft_putchar(char c);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	rush(int x, int y)
 {	
@@ -20,7 +23,7 @@ void	rush(int x, int y)
 	{
 		if (k == 1)
 		{
-			for (int i= 1; i <= x ; i++)
+			for (int i=1; i <= x ; i++)
 			{
 				if (i == 1 || i == x)
 					ft_putchar('A');
@@ -31,7 +34,7 @@ void	rush(int x, int y)
 		}
 		else if (k > 1 && k < y)
 		{
-			for (int i= 1; i <= x; i++)
+			for (int i = 1; i <= x; i++)
 			{
 				if (i == 1 || i == x)
 					ft_putchar('B');
@@ -42,7 +45,7 @@ void	rush(int x, int y)
 		}
 		else
 		{
-			for (int i=1; i <= x; i++)
+			for (int i = 1; i <= x; i++)
 			{
 				if( i == 1 || i == x)
 					ft_putchar('C');
@@ -51,5 +54,11 @@ void	rush(int x, int y)
 			}
 		}
 	}
+	ft_putchar('\n');
 }
 
+int	main(void)
+{
+	rush(7,6);
+	return 0;
+}

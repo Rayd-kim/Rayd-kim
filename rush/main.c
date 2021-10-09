@@ -6,15 +6,16 @@
 /*   By: youskim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 21:04:28 by youskim           #+#    #+#             */
-/*   Updated: 2021/10/09 21:07:58 by youskim          ###   ########.fr       */
+/*   Updated: 2021/10/09 23:34:27 by rayd             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<unistd.h>
+void	rush(int x, int y);
 
 int	main(void)
 {
-	rush(5, 5);
+	rush(60, 50);
 	return (0);
 }
